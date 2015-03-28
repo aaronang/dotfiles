@@ -43,6 +43,8 @@
 *.color14:      base0F
 *.color15:      base07
 
+*intensityStyles: false 
+
 ! Font
 URxvt*.font: xft:Terminus:size=11
 
