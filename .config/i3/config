@@ -37,6 +37,7 @@ bindsym Mod4+l exec i3lock -c 263238 -d 1 -i ~/pictures/water_mountains.png -u -
 # start dmenu (a program launcher)
 bindsym $mod+d exec dmenu_run -h 18 -fn "Terminus-8:normal" -nb "$base00" -nf "$base06" -sb "$base0C" -sf "$base06" -p "Run:"
 bindsym $mod+i exec chromium
+bindsym $mod+u [urgent=latest] focus
 # There also is the (new) i3-dmenu-desktop which only displays applications
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
@@ -206,7 +207,7 @@ bar {
 }
 
 # Gaps
-for_window [class="^.*"] border pixel 1
+for_window [class="^.*"] border pixel 2
 gaps inner 10
 gaps outer 0
 
@@ -214,8 +215,8 @@ gaps outer 0
 exec compton --config ~/.config/compton.conf -b
 
 # Screen brightness
-bindsym XF86MonBrightnessUp exec xbacklight -inc +5 
-bindsym XF86MonBrightnessDown exec xbacklight -dec -5 
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10 
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10 
 
 # Volume
 bindsym XF86AudioRaiseVolume exec amixer -q set Master 2dB+ unmute && killall -USR1 i3status
