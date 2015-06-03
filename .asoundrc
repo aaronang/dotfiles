@@ -4,8 +4,8 @@
 # * http://alsa.opensrc.org/AlsaSharing
 
 pcm.card0 {
-    type hw
-    card 1
+    type pulse
+    card PCM
 # mmap_emulation true
 }
 
@@ -43,16 +43,22 @@ pcm.dsp0 {
 }
 
 ctl.dsp0 {
-    type hw
-    card 1
+    type pulse
+    card PCM
 }
 
 pcm.!default {
-    type plug
+    type pulse
     slave.pcm "asym0"
+    fallback "sysdefault"
+    hint {
+        show on
+        description "Default ALSA Output (currently PulseAudio Sound Server)"
+    }
 }
 
 ctl.!default {
-    type hw
-    card 1
+    type pulse
+    card PCM
+    fallback "sysdefault"
 }

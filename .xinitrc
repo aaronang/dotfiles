@@ -11,14 +11,17 @@ if [ -d /etc/X11/xinit/xinitrc.d ]; then
   unset f
 fi
 
+xrandr --output DP2 --auto  --left-of eDP1
+xrandr --output DP2 --auto  --left-of eDP1
+
 touch $HOME/.dbus/Xdbus
 chmod 600 $HOME/.dbus/Xdbus
 env | grep DBUS_SESSION_BUS_ADDRESS > $HOME/.dbus/Xdbus
 echo 'export DBUS_SESSION_BUS_ADDRESS' >> $HOME/.dbus/Xdbus
 
 xrdb -merge ~/.Xresources
-xrandr --output DP2 --auto  --left-of eDP1
-xbacklight -set 40
-feh --bg-center /home/awzang/pictures/water_mountains.jpg
-sleep 1; xset -dpms; xset s off
-exec i3
+xbacklight -set 50
+# feh --bg-center /home/awzang/pictures/water_mountains.jpg
+# sleep 1; xset -dpms; xset s off
+# exec i3
+exec startxfce4
