@@ -5,7 +5,7 @@ FILES=$PWD/*
 
 for f in $FILES; do
 	FILE=$(basename "$f")
-	NEW_NAME=$(echo $FILE | sed 's/[\ _]/-/g' | tr '[:upper:]' '[:lower:]')
+	NEW_NAME=$(echo $FILE | sed 's/[\ _]/-/g' | sed 's/\://g' | tr '[:upper:]' '[:lower:]')
 	echo $NEW_NAME
 	if [ "$FILE" != "$NEW_NAME" ]; then
 		mv "$FILE" "$NEW_NAME"

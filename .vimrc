@@ -10,7 +10,6 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
-Plugin 'derekwyatt/vim-scala'
 Plugin 'scrooloose/nerdtree'
 
 call vundle#end()            " required
@@ -339,7 +338,11 @@ map <leader>x :e ~/buffer.md<cr>
 " Toggle paste mode on and off
 map <leader>pp :setlocal paste!<cr>
 
-
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Custom Mapping 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" NerdTree Toggle
+nmap <C-N> :NERDTreeToggle<CR>
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""

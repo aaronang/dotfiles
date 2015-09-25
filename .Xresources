@@ -4,6 +4,7 @@
 
 ! Colors
 ! Scheme: Base16 Custom Flat
+
 #define base00 #263238
 #define base01 #37474F
 #define base02 #7F8C8D
@@ -46,7 +47,7 @@ URxvt*.color15:      base07
 URxvt*intensityStyles: false 
 
 ! Font
-URxvt*.font: xft:DejaVu Sans Mono:size=12
+URxvt*.font: xft:DejaVu Sans Mono:size=13
 
 ! Scrollbar
 URxvt*.scrollBar:           false
