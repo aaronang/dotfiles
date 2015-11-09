@@ -2,7 +2,12 @@
 export ZSH=/home/aaronang/.oh-my-zsh
 
 # Theme
-ZSH_THEME="gentoo"
+ZSH_THEME="powerline"
+
+# Powerline configuration
+POWERLINE_DISABLE_RPROMPT="true"
+POWERLINE_NO_BLANK_LINE="true"
+POWERLINE_DETECT_SSH="true"
 
 # Plugins 
 plugins=(git cabal)

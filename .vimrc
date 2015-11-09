@@ -7,6 +7,7 @@
 "       http://amix.dk - amix@amix.dk
 "
 " Sections:
+"    -> Vundle
 "    -> General
 "    -> VIM user interface
 "    -> Colors and Fonts
@@ -22,6 +23,22 @@
 "    -> Helper functions
 "
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Vundle
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set nocompatible
+filetype off
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+Plugin 'bling/vim-airline'
+Plugin 'chriskempson/base16-vim'
+call vundle#end()
+
+" vim-airline
+let g:airline_powerline_fonts = 1
+let g:airline_theme='solarized'
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -134,7 +151,7 @@ set foldcolumn=1
 syntax enable 
 
 try
-    colorscheme desert
+    colorscheme default
 catch
 endtry
 
