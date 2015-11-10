@@ -8,6 +8,7 @@ ZSH_THEME="powerline"
 POWERLINE_DISABLE_RPROMPT="true"
 POWERLINE_NO_BLANK_LINE="true"
 POWERLINE_DETECT_SSH="true"
+POWERLINE_CUSTOM_CURRENT_PATH="%3~"
 
 # Plugins 
 plugins=(git cabal)
@@ -24,3 +25,5 @@ zstyle ':completion:*' accept-exact '*(N)'
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zsh/cache
 
+# Aliases
+unalias vi
