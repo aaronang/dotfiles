@@ -36,6 +36,7 @@ Plugin 'bling/vim-airline'
 Plugin 'chriskempson/base16-vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
+Plugin 'Valloric/YouCompleteMe'
 Plugin 'LaTeX-Box-Team/LaTeX-Box'
 call vundle#end()
 
@@ -83,8 +84,11 @@ set history=500
 set number
 
 " Enable filetype plugins
-filetype plugin on
-filetype indent on
+filetype off
+filetype plugin indent on
+
+" Autocompletion
+set omnifunc=syntaxcomplete#Complete
 
 " Set to auto read when a file is changed from the outside
 set autoread
@@ -100,6 +104,14 @@ nmap <leader>w :w!<cr>
 " :W sudo saves the file 
 " (useful for handling the permission-denied error)
 command W w !sudo tee % > /dev/null
+
+" Copy pasting
+nmap <leader>y "+y
+vmap <leader>y "+y
+nmap <leader>d "+d
+vmap <leader>d "+d
+nmap <leader>p "+p
+vmap <leader>p "+p
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -234,6 +246,8 @@ set ai "Auto indent
 set si "Smart indent
 set wrap "Wrap lines
 
+" Show spaces visually
+set list listchars=tab:\ \ ,trail:·
 
 """"""""""""""""""""""""""""""
 " => Visual mode related

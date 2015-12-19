@@ -16,6 +16,7 @@ plugins=(git cabal)
 # User configuration
 export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin:/home/aaronang/.local/bin:/home/aaronang/bin"
 source $ZSH/oh-my-zsh.sh
+export JAVA_HOME="/usr/java/jdk1.7.0_79"
 
 # Nix
 source /home/aaronang/.nix-profile/etc/profile.d/nix.sh
@@ -27,3 +28,5 @@ zstyle ':completion:*' cache-path ~/.zsh/cache
 
 # Aliases
 unalias vi
+alias vim='vimx'
+alias rng='ranger'
