@@ -32,20 +32,10 @@ set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
-Plugin 'bling/vim-airline'
 Plugin 'chriskempson/base16-vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'Xuyuanp/nerdtree-git-plugin'
-Plugin 'Valloric/YouCompleteMe'
-Plugin 'LaTeX-Box-Team/LaTeX-Box'
 call vundle#end()
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Vim-airline
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:airline_powerline_fonts = 1
-let g:airline_theme='solarized'
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -183,9 +173,6 @@ set noerrorbells
 set novisualbell
 set t_vb=
 set tm=500
-
-" Add a bit extra margin to the left
-set foldcolumn=1
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
