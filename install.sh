@@ -21,7 +21,7 @@ if ! command -v tmux > /dev/null 2>&1; then
 fi
 
 if ! command -v git > /dev/null 2>&1; then
-    echo "Tmux is not installed"
+    echo "Git is not installed"
     exit 1
 fi
 
@@ -32,6 +32,9 @@ ln -s $DOTFILES/zshrc ~/.zshrc
 ln -s $DOTFILES/vimrc ~/.vimrc
 ln -s $DOTFILES/tmux.conf ~/.tmux.conf
 ln -s $DOTFILES/tmuxline ~/.tmuxline
+
+echo "Changing default shell to Zsh"
+chsh -s $(which zsh) $(whoami)
 
 echo "Installing Oh My Zsh"
 sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
