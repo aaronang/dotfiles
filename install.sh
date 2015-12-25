@@ -1,5 +1,8 @@
 #!/bin/bash
 
+set -e
+set -u
+
 if ! command -v vim > /dev/null 2>&1; then
     echo "Vim is not installed"
     exit 1
