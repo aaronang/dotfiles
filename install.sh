@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 set -e
 set -u
@@ -30,11 +30,14 @@ fi
 
 DOTFILES=$(pwd -P)
 
+mkdir -p ~/.config
+
 echo "Creating symbolic links"
 ln -s $DOTFILES/zshrc ~/.zshrc
 ln -s $DOTFILES/vimrc ~/.vimrc
 ln -s $DOTFILES/tmux.conf ~/.tmux.conf
 ln -s $DOTFILES/tmuxline ~/.tmuxline
+ln -s $DOTFILES/redshift.conf ~/.config/redshift.conf
 
 echo "Changing default shell to Zsh"
 chsh -s $(which zsh) $(whoami)
