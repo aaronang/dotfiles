@@ -7,8 +7,11 @@ ZSH_THEME="fishy"
 # Plugins 
 plugins=(git cabal)
 
+ENABLE_CORRECTION="true"
+COMPLETION_WAITING_DOTS="true"
+
 # User configuration
-export PATH="/usr/local/bin:/usr/local/sbin:/usr/bin:/usr/sbin:/home/aaronang/bin"
+export PATH="export PATH="/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games""
 source $ZSH/oh-my-zsh.sh
 
 # Nix
@@ -20,5 +23,5 @@ zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zsh/cache
 
 # Aliases
-unalias vi
-alias vim='vimx'
+#unalias vi
+#alias vim='vimx'
