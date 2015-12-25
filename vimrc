@@ -69,7 +69,8 @@ let g:airline_powerline_fonts = 1
 let g:tmuxline_preset = {
     \'a'    : '#{?client_prefix,⚫,⚪}',
     \'b'    : '#S',
-    \'c'    : '#I #W',
+    \'win'    : '#I #W',
+    \'cwin' : '#I #W',
     \'y'    : '%R',
     \'z'    : '#H'}
 
