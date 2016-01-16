@@ -39,6 +39,9 @@ ln -s $DOTFILES/tmux.conf ~/.tmux.conf
 ln -s $DOTFILES/tmuxline ~/.tmuxline
 ln -s $DOTFILES/redshift.conf ~/.config/redshift.conf
 
+echo "Installing Nix"
+curl https://nixos.org/nix/install | sh
+
 echo "Changing default shell to Zsh"
 chsh -s $(which zsh) $(whoami)
 
