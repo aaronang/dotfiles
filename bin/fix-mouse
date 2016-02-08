@@ -13,3 +13,11 @@ if xinput | grep -q 'Logitech';	then
 	xinput set-prop 'Logitech M705' 'Device Accel Adaptive Deceleration' 1
 	xinput set-prop 'Logitech M705' 'Device Accel Velocity Scaling' 1
 fi
+
+# if xinput | grep -q 'PS/2 Generic Mouse'; then
+#     xinput set-prop 'PS/2 Generic Mouse' 'Evdev Wheel Emulation' 1
+#     xinput set-prop 'PS/2 Generic Mouse' 'Evdev Wheel Emulation Axes' 6 7 4 5
+#     xinput set-prop 'PS/2 Generic Mouse' 'Evdev Wheel Emulation Timeout' 200
+#     xinput set-prop 'PS/2 Generic Mouse' 'Evdev Wheel Emulation Button' 3
+# fi
+
