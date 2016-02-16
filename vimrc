@@ -178,6 +178,9 @@ set hid
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
+" Display tabs and trailing spaces visually
+set list listchars=tab:\ \ ,trail:·
+
 " In many terminal emulators the mouse works just fine, thus enable it.
 if has('mouse')
   set mouse=a
