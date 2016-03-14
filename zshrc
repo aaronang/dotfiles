@@ -5,7 +5,7 @@ export ZSH=/home/aaronang/.oh-my-zsh
 ZSH_THEME="fishy"
 
 # Plugins 
-plugins=(git cabal)
+plugins=(git)
 
 ENABLE_CORRECTION="true"
 COMPLETION_WAITING_DOTS="true"
@@ -19,12 +19,3 @@ zstyle ':completion:*' accept-exact '*(N)'
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zsh/cache
 
-# Aliases
-#unalias vi
-#alias vim='vimx'
-export PATH="$HOME/.rbenv/bin:$PATH"
-eval "$(rbenv init -)"
-export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
-
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"

@@ -3,30 +3,14 @@
 set -e
 set -u
 
-if ! command -v vim > /dev/null 2>&1; then
-    echo "Vim is not installed"
-    exit 1
-fi
-
-if ! command -v curl > /dev/null 2>&1; then
-    echo "Curl is not installed"
-    exit 1
-fi
-
-if ! command -v zsh > /dev/null 2>&1; then
-    echo "Zsh is not installed"
-    exit 1
-fi
-
-if ! command -v tmux > /dev/null 2>&1; then
-    echo "Tmux is not installed"
-    exit 1
-fi
-
-if ! command -v git > /dev/null 2>&1; then
-    echo "Git is not installed"
-    exit 1
-fi
+read -r -p "Would you like to install the prerequisites for Ubuntu? [y/N]" response
+case $response in
+    [yY][eE][sS]|[yY])
+        sudo apt-get install curl zsh git tmux vim-gnome
+        ;;
+    *)
+        ;;
+esac
 
 DOTFILES=$(pwd -P)
 
