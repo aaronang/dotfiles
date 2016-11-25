@@ -3,6 +3,9 @@
 set -e
 set -u
 
+echo "Fixing time synchronization between Windows and Ubuntu"
+timedatectl set-local-rtc 1
+
 echo "Installing prerequisites"
 sudo apt-get install curl zsh git vim-gnome
 
