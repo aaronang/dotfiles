@@ -35,3 +35,6 @@ sudo apt-get install paper-cursor-theme
 echo "Installing TLP"
 sudo apt-get install tlp tlp-rdw
 sudo tlp start
+
+echo "Installing Redshift"
+sudo apt-get install redshift redshift-gtk
