@@ -4,7 +4,7 @@ set -e
 set -u
 
 echo "Installing prerequisites"
-sudo apt-get install curl zsh git
+sudo apt-get install curl zsh git vim-gnome
 
 echo "Creating symbolic links"
 DOTFILES=$(pwd -P)
