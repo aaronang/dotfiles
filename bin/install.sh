@@ -38,3 +38,8 @@ sudo tlp start
 
 echo "Installing Redshift"
 sudo apt-get install redshift redshift-gtk
+
+echo "Installing Terminix"
+sudo add-apt-repository ppa:webupd8team/terminix
+sudo apt-get update
+sudo apt-get install terminix
