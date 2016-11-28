@@ -23,7 +23,7 @@ function sync_time {
 
 function install_prerequisites {
   echo "Installing prerequisites"
-  sudo apt-get install curl zsh git vim-gnome
+  sudo apt-get install curl zsh git vim-gnome build-essential
 }
 
 function create_symoblic_links {
@@ -82,6 +82,8 @@ function install_nodejs {
   echo "Installing Node.js"
   curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
   sudo apt-get install -y nodejs
+  mkdir -p ~/.npm-global
+  npm config set prefix '~/.npm-global'
 }
 
 main
