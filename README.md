@@ -5,6 +5,7 @@
 ```bash
 # Clone, initialize, and update Git submodules
 $ git clone git@github.com:aaronang/dotfiles.git
+$ cd dotfiles
 $ git submodule update --init --recursive
 
 # Install Oh My Zsh
