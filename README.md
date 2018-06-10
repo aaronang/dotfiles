@@ -13,8 +13,8 @@ $ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/m
 
 # Set up Pure
 $ mkdir -p ~/.zfunctions
-$ ln -s pure/pure.zsh ~/.zfunctions/pure.zsh
-$ ln -s pure/async.zsh ~/.zfunctions/async.zsh
+$ ln -s pure/pure.zsh ~/.zfunctions/prompt_pure_setup
+$ ln -s pure/async.zsh ~/.zfunctions/async
 
 # Create symbolic links
 $ ln -s .zshrc ~/.zshrc
