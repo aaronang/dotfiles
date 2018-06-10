@@ -18,6 +18,7 @@ export FPATH=~/.zfunctions:$FPATH
 # Activate Pure
 autoload -U promptinit; promptinit
 prompt pure
+PROMPT='%(?.%F{magenta}▲.%F{red}△)%f '
 
 # Load local configuration
 if [ -f ~/.zshrc.local ]; then
