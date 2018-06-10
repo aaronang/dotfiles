@@ -1,16 +1,21 @@
 # Dotfiles
 
-## Fix: HP ZBook 14 Mute Button
+## Getting Started
 
-In `/lib/udev/hwdb.d/60-keyboard.hwdb` change `fn_esc` to `f20`, such that something similar as the example below is obtained. Then run `sudo udevadm hwdb -u` and reboot the system. 
+```bash
+# Clone, initialize, and update Git submodules
+$ git clone git@github.com:aaronang/dotfiles.git
+$ git submodule update --init --recursive
 
+# Install Oh My Zsh
+$ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
+# Set up Pure
+$ mkdir -p ~/.zfunctions
+$ ln -s pure/pure.zsh ~/.zfunctions/pure.zsh
+$ ln -s pure/async.zsh ~/.zfunctions/async.zsh
+
+# Create symbolic links
+$ ln -s .zshrc ~/.zshrc
+$ ln -s .hyper.js ~/.hyper.js
 ```
-###########################################################
-# Hewlett Packard
-###########################################################
-
-evdev:atkbd:dmi:bvn*:bvr*:bd*:svnHewlett-Packard*:pn*:pvr*
- KEYBOARD_KEY_81=f20
-```
-
-Source: https://bugs.launchpad.net/ubuntu/+source/systemd/+bug/1334968
