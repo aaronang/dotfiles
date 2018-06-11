@@ -24,6 +24,6 @@
 ▲ ln -s pure/async.zsh ~/.zfunctions/async
 
 # Create symbolic links
-▲ ln -s .zshrc ~/.zshrc
-▲ ln -s .hyper.js ~/.hyper.js
+▲ ln -s $(pwd)/.zshrc ~/.zshrc
+▲ ln -s $(pwd)/.hyper.js ~/.hyper.js
 ```
