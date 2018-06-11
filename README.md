@@ -20,8 +20,8 @@
 
 # Set up Pure
 ▲ mkdir -p ~/.zfunctions
-▲ ln -s pure/pure.zsh ~/.zfunctions/prompt_pure_setup
-▲ ln -s pure/async.zsh ~/.zfunctions/async
+▲ ln -s $(pwd)/pure/pure.zsh ~/.zfunctions/prompt_pure_setup
+▲ ln -s $(pwd)/pure/async.zsh ~/.zfunctions/async
 
 # Create symbolic links
 ▲ ln -s $(pwd)/.zshrc ~/.zshrc
