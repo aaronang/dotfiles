@@ -22,5 +22,5 @@ PROMPT='%(?.%F{magenta}▲.%F{red}△)%f '
 
 # Load local configuration
 if [ -f ~/.zshrc.local ]; then
-    source .zshrc.local
+    source ~/.zshrc.local
 fi
