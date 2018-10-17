@@ -2,9 +2,9 @@
 export ZSH=$HOME/.oh-my-zsh
 
 # Disable theme to use Pure
-ZSH_THEME=""
+ZSH_THEME="spaceship"
 
-plugins=(git)
+plugins=(git zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -14,11 +14,6 @@ export VISUAL=vim
 
 # Create user-specific directory for ZSH functions
 export FPATH=~/.zfunctions:$FPATH
-
-# Activate Pure
-autoload -U promptinit; promptinit
-prompt pure
-PROMPT='%(?.%F{magenta}▲.%F{red}△)%f '
 
 # Load local configuration
 if [ -f ~/.zshrc.local ]; then
