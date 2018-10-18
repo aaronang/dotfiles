@@ -1,7 +1,9 @@
 # Path to your oh-my-zsh installation
 export ZSH=$HOME/.oh-my-zsh
 
-# Disable theme to use Pure
+# Spaceship options that must be set before sourcing theme
+SPACESHIP_GIT_SYMBOL=""
+
 ZSH_THEME="spaceship"
 
 plugins=(git zsh-syntax-highlighting)
@@ -12,15 +14,12 @@ source $ZSH/oh-my-zsh.sh
 export EDITOR=vim
 export VISUAL=vim
 
-# Create user-specific directory for ZSH functions
-export FPATH=~/.zfunctions:$FPATH
-
 # Load local configuration
 if [ -f ~/.zshrc.local ]; then
     source ~/.zshrc.local
 fi
 
-# Spaceship
+# Spaceship options
 SPACESHIP_CHAR_COLOR_SUCCESS=magenta
 SPACESHIP_CHAR_SYMBOL=▲
 SPACESHIP_CHAR_SUFFIX=" "
