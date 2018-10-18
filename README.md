@@ -2,28 +2,22 @@
 
 ## Getting Started
 
-```bash
-# Clone, initialize, and update Git submodules
-▲ git clone git@github.com:aaronang/dotfiles.git
-▲ cd dotfiles
-▲ git submodule update --init --recursive
-
+```shell
 # Install Oh My Zsh
 ▲ sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-# Install Powerline fonts (APT package: fonts-powerline)
-▲ git clone https://github.com/powerline/fonts.git --depth=1
-▲ cd fonts
-▲ ./install.sh
-▲ cd ..
-▲ rm -rf fonts
+# Install IBM Plex Mono
+▲ git clone https://github.com/IBM/plex.git
+▲ cp plex/IBM-Plex-Mono/fonts/complete/ttf/*.ttf /Library/Fonts
 
-# Set up Pure
-▲ mkdir -p ~/.zfunctions
-▲ ln -s $(pwd)/pure/pure.zsh ~/.zfunctions/prompt_pure_setup
-▲ ln -s $(pwd)/pure/async.zsh ~/.zfunctions/async
+# Install Spaceship theme
+▲ git clone https://github.com/denysdovhan/spaceship-prompt.git "$ZSH_CUSTOM/themes/spaceship-prompt"
+▲ ln -s "$ZSH_CUSTOM/themes/spaceship-prompt/spaceship.zsh-theme" "$ZSH_CUSTOM/themes/spaceship.zsh-theme"
 
-# Create symbolic links
+# Clone repository and create symbolic links
+▲ git clone https://github.com/aaronang/dotfiles.git
+▲ cd dotfiles
 ▲ ln -s $(pwd)/.zshrc ~/.zshrc
-▲ ln -s $(pwd)/.hyper.js ~/.hyper.js
 ```
+
+> Note: Machine-specific environment variables should be exported in `~/.zshrc.local`.

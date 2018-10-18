@@ -19,3 +19,12 @@ export FPATH=~/.zfunctions:$FPATH
 if [ -f ~/.zshrc.local ]; then
     source ~/.zshrc.local
 fi
+
+# Spaceship
+SPACESHIP_CHAR_COLOR_SUCCESS=magenta
+SPACESHIP_CHAR_SYMBOL=▲
+SPACESHIP_CHAR_SUFFIX=" "
+SPACESHIP_DIR_TRUNC=0
+SPACESHIP_DIR_TRUNC_REPO=false
+SPACESHIP_GIT_STATUS_PREFIX=" "
+SPACESHIP_GIT_STATUS_SUFFIX=""
